@@ -51,7 +51,7 @@ def google_get_user_info(access_token: str) -> Dict[str, Any]:
     return response.json()
 
 def get_user_data(validated_data: Dict[str, str]) -> Dict[str, str]:
-    domain = settings.BASE_API_URL
+    domain = 'https://geek.tools'
     redirect_uri = f'{domain}/google-login/'
     code = validated_data.get('code')
     error = validated_data.get('error')
